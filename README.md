@@ -1,4 +1,3 @@
-# RAGChatBot
 # CrewAI Chatbot with Ollama and RAG
 
 A fully-featured chatbot application that combines:
