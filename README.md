@@ -25,26 +25,32 @@ A fully-featured chatbot application that combines:
 
 ## Quick Start
 
+1. Clone the repository
 ```bash
-# 1. Clone the repository
 git clone https://github.com/yourusername/crewai-chatbot.git
-cd crewai-chatbot
+cd crewai-chatbot 
+```
 
-# 2. Start Ollama service
+2. Start Ollama service
+```bash
 ollama serve &
+```
 
-# 3. Pull required models
+3. Pull required models
+```bash
 ollama pull llama2
 ollama pull all-minilm  # Required for embeddings
 ollama pull mistral    # Optional
 ollama pull phi        # Optional
 ollama pull gemma      # Optional
+```
 
-# 4. Start the application
+4. Start the application
+```bash
 docker-compose up --build --force-recreate
 ```
 
-# 5. Access the chatbot at:
+5. Access the chatbot at:
 http://localhost:8000 or open static/index.html directly in your browser
 
 ## Usage Guide
