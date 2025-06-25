@@ -77,6 +77,7 @@ http://localhost:8000 or open static/index.html directly in your browser
 - Hybrid Mode: Combine CrewAI and RAG for maximum intelligence
 
 ## Project Structure
+```bash
 text
 ├── main.py                  # FastAPI backend with RAG integration
 ├── requirements.txt         # Python dependencies (now with ChromaDB support)
@@ -86,13 +87,16 @@ text
 └── static/
     ├── index.html           # Enhanced frontend with RAG controls
     └── uploads/             # Temporary PDF storage
+```
 
 ## Configuration
 ## Environment Variables
+```bash
 env
 OLLAMA_HOST=http://host.docker.internal:11434  # Ollama connection
 CHROMA_DB_PATH=./chroma_db                     # Vector store location
 UPLOAD_DIR=./static/uploads                   # PDF upload directory
+```
 
 ## Supported File Types
 PDF documents (.pdf)
