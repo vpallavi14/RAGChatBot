@@ -54,14 +54,14 @@ docker-compose up --build --force-recreate
 http://localhost:8000 or open static/index.html directly in your browser
 
 ## Usage Guide
-# Basic Chat
+## Basic Chat
 Type your question in the input box
 
 Press Enter or click Send
 
 Receive an AI-generated response
 
-# Document Intelligence (RAG)
+## Document Intelligence (RAG)
 Click the upload button in the settings panel
 
 Select a PDF file (research papers, manuals, etc.)
@@ -70,7 +70,7 @@ Toggle "Use RAG" to enable document-based responses
 
 Chat naturally - the AI will reference document content
 
-# Advanced Features
+## Advanced Features
 Model Selection: Choose between Llama 2, Mistral, Phi, or Gemma
 
 CrewAI Mode: Enable for multi-agent processing (slower but more thorough)
