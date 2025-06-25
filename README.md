@@ -55,27 +55,27 @@ http://localhost:8000 or open static/index.html directly in your browser
 
 ## Usage Guide
 ## Basic Chat
-Type your question in the input box
+- Type your question in the input box
 
-Press Enter or click Send
+- Press Enter or click Send
 
-Receive an AI-generated response
+- Receive an AI-generated response
 
 ## Document Intelligence (RAG)
-Click the upload button in the settings panel
+- Click the upload button in the settings panel
 
-Select a PDF file (research papers, manuals, etc.)
+- Select a PDF file (research papers, manuals, etc.)
 
-Toggle "Use RAG" to enable document-based responses
+- Toggle "Use RAG" to enable document-based responses
 
-Chat naturally - the AI will reference document content
+- Chat naturally - the AI will reference document content
 
 ## Advanced Features
-Model Selection: Choose between Llama 2, Mistral, Phi, or Gemma
+- Model Selection: Choose between Llama 2, Mistral, Phi, or Gemma
 
-CrewAI Mode: Enable for multi-agent processing (slower but more thorough)
+- CrewAI Mode: Enable for multi-agent processing (slower but more thorough)
 
-Hybrid Mode: Combine CrewAI and RAG for maximum intelligence
+- Hybrid Mode: Combine CrewAI and RAG for maximum intelligence
 
 ## Project Structure
 text
@@ -89,72 +89,72 @@ text
     └── uploads/             # Temporary PDF storage
 
 ## Configuration
-# Environment Variables
+## Environment Variables
 env
 OLLAMA_HOST=http://host.docker.internal:11434  # Ollama connection
 CHROMA_DB_PATH=./chroma_db                     # Vector store location
 UPLOAD_DIR=./static/uploads                   # PDF upload directory
 
-# Supported File Types
+## Supported File Types
 PDF documents (.pdf)
 
 
 ## How It Works
-# RAG Pipeline
+## RAG Pipeline
 1. Document Processing:
 
-PDFs are chunked into 1000-character segments
+- PDFs are chunked into 1000-character segments
 
-Text embeddings generated using all-MiniLM-L6-v2
+- Text embeddings generated using all-MiniLM-L6-v2
 
-Stored in ChromaDB vector database
+- Stored in ChromaDB vector database
 
 2. Query Handling:
 
-User question is vectorized
+- User question is vectorized
 
-Top 3 most relevant document chunks retrieved
+- Top 3 most relevant document chunks retrieved
 
-Context is injected into the LLM prompt
+- Context is injected into the LLM prompt
 
 3. Response Generation:
 
-Ollama generates answer using document context
+- Ollama generates answer using document context
 
-Sources are traced back to original PDF chunks
+- Sources are traced back to original PDF chunks
 
 ## Troubleshooting
-# Document Processing Issues
+## Document Processing Issues
 
-Ensure PDFs contain selectable text (not scanned images)
+- Ensure PDFs contain selectable text (not scanned images)
 
-Check Docker logs for processing errors
+- Check Docker logs for processing errors
 
-Verify chroma_db directory has write permissions
+- Verify chroma_db directory has write permissions
 
-# Performance Tips
+## Performance Tips
 
-For large documents (>50 pages), increase Docker memory allocation
+- For large documents (>50 pages), increase Docker memory allocation
 
-Restart Ollama if models become unresponsive: ollama serve --restart
+- Restart Ollama if models become unresponsive: ollama serve --restart
 
-Clear document cache by deleting the chroma_db directory
+- Clear document cache by deleting the chroma_db directory
 
 ## Pro Tips
-# Document Organization:
+## Document Organization:
 
-Upload related documents together for better context
+- Upload related documents together for better context
 
-Name files meaningfully (they appear in source references)
+- Name files meaningfully (they appear in source references)
 
-# Query Techniques:
+## Query Techniques:
 
-"Based on the document, ..." - forces RAG context use
+- "Based on the document, ..." - forces RAG context use
 
-"Compare document A and B on..." - cross-document analysis
+- "Compare document A and B on..." - cross-document analysis
 
-# Advanced Configuration:
+## Advanced Configuration:
 
-Adjust chunk size in main.py for different document types
+- Adjust chunk size in main.py for different document types
 
-Modify embedding model for non-English documents
+- Modify embedding model for non-English documents
