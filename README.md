@@ -27,7 +27,7 @@ A fully-featured chatbot application that combines:
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/RAGChatBot.git
-cd crewai-chatbot 
+cd RAGChatBot
 ```
 
 2. Start Ollama service
