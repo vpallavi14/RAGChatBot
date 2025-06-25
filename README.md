@@ -25,7 +25,7 @@ A fully-featured chatbot application that combines:
 
 ## Quick Start
 
-bash
+'''bash
 # 1. Clone the repository
 git clone https://github.com/yourusername/crewai-chatbot.git
 cd crewai-chatbot
@@ -43,7 +43,7 @@ ollama pull gemma      # Optional
 # 4. Start the application
 docker-compose up --build --force-recreate
 
-## Access the chatbot at:
+# 5. Access the chatbot at:
 http://localhost:8000 or open static/index.html directly in your browser
 
 ## Usage Guide
